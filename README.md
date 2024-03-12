@@ -67,6 +67,21 @@ getVerse('Psalms', '22:9-10', 'NIV').then(result => console.log(result));
 }
 ```
 
+Using the **split** parameter:
+
+```javascript
+console.log(await getVerse('John', '1:1-3', "NLT", true))
+```
+
+```json
+{
+  "citation": "John 1:1-3 NLT",
+  "passage": [ "Prologue: Christ, the Eternal Word", " In the beginning the Word already existed.The Word was with God,and the Word was God.",
+    " He existed in the beginning with God.", " God created everything through him,and nothing was created except through him."
+  ],
+}
+```
+
 ---
 
 ## Responses
