@@ -52,7 +52,7 @@ console.log(await getVerse('Luke', '9:55', 'NLT'))
 }
 ```
 
-#### or alternatively..
+or alternatively..
 
 ```js
 import { getVerse } from 'placeholder';

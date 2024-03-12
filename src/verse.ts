@@ -27,13 +27,13 @@ export async function getVerse(book: string, passage: string, version: string = 
 
     if (split) {
         let collected: string[] = [];
-        $(`span[class^="text ${book}-${passage.split(":")[0]}"]`).text().split(/\d+/).forEach(i => {
-            collected.push(i);
+        $(`span[id^="en-${version}-"]`).each((i, elem) => {
+        let verseText = $(elem).text();
+        verseText = verseText.replace(/\d+/g, '');
+        collected.push(verseText);
         });
         passageContent = collected;
     }
-    
-
     
  
     return footnotes
