@@ -8,8 +8,10 @@ export async function getVerseOfTheDay(version: string = "NLT") {
         const { data } = await axios.get(URL);
         const $ = cheerio.load(data);
 
-        let verse = $("#rp-passage-0-5121").text().split(' ').slice(1)[0];
-        let pass = $(".rp-passage-display").text();
+        $('.versenum').remove();
+
+        let verse = $(".rp-passage-text").text().trim();
+        let pass = `${$(".rp-passage-display").text()} ${version}`;
 
         return {
             citation: pass,
