@@ -52,7 +52,7 @@ console.log(await getVerse('Luke', '9:55', 'NLT'))
 }
 ```
 
-or alternatively..
+#### or alternatively..
 
 ```js
 import { getVerse } from 'placeholder';
@@ -67,7 +67,8 @@ getVerse('Psalms', '22:9-10', 'NIV').then(result => console.log(result));
 }
 ```
 
-Using the **split** parameter:
+
+#### Using the **split** parameter:
 
 ```javascript
 console.log(await getVerse('John', '1:1-3', "NLT", true))
